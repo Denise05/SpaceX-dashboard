@@ -1,0 +1,127 @@
+/* Indeling container telefoon */
+.container{
+				display: grid;
+				min-height: 1030px;
+				grid-template-columns: 1fr;
+				grid-template-rows: 70px 1fr 1fr 1fr 1fr 45px;
+				grid-template-areas:
+					"header"
+					"lijn"
+					"staaf"
+					"donut"
+					"lijn2"
+					"footer"
+				;
+
+}
+
+
+/* Namen van grids */
+header {
+	grid-area: header;
+}
+
+canvas#lijn {
+	grid-area: lijn;
+}
+
+canvas#staaf {
+	grid-area: staaf;
+}
+
+canvas#donut {
+	grid-area: donut;
+}
+
+canvas#lijn2 {
+	grid-area: lijn2;
+}
+
+footer {
+	grid-area: footer;
+}
+
+
+/* Algemene opmaak body */
+body {
+	background-color: #2B3339;
+	color: white;
+	font-family: 'arial';
+	font-size: 0.8em;
+}
+
+
+/* aAfmetingen en margin logo */
+.logo {
+	height: 50px;
+	width: 200px;
+	margin-left: 16px;
+}
+
+
+/* Tekst uitlijnen footer */
+footer > p {
+	text-align: center;
+}
+
+
+/* Canvas afstanden en opmaak */
+canvas {
+	
+	padding-top: 32px;
+	padding-bottom: 32px;
+	background-color: #3C4447;
+	border-radius: 4px;
+	margin: 3px;
+}
+
+
+/* Breakpoint naar Ipad */
+@media only screen and (min-width: 768px){
+	.container{
+			min-height: 600px;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 80px 320px 320px 80px;
+			grid-template-areas:
+				"header header"
+				"lijn staaf"
+				"donut lijn2"
+				"footer footer"
+				;		
+	}
+
+
+	/* Maximale afmetingen canvas */
+	canvas {
+		max-height: 400px;
+		max-width: 500px;
+	}
+
+
+	/* Margin logo */
+	.logo {
+		margin-left: 42%;
+	}
+}
+
+	
+/* Breakpoint naar laptop klein */
+@media only screen and (min-width: 1280px){
+
+		canvas#lijn, canvas#donut {
+			margin-left: 130px;
+		}
+	
+}
+
+
+
+/* Breakpoint naar laptop groot */
+@media only screen and (min-width: 1366px){
+
+	/* Margin canvas lijn en donut */
+	canvas#lijn, canvas#donut {
+			margin-left: 170px;
+		}
+	
+}
